@@ -19,17 +19,42 @@ export function handleRoutes(req, res) {
     }
 
     else if (pathname.startsWith("/style/")) {
-        console.log("CSS requested:", pathname);  // ← ADD THIS
+        console.log("CSS requested:", pathname);
         const filePath = `.${pathname}`;
-        console.log("Looking for:", filePath);   // ← ADD THIS
+        console.log("Looking for:", filePath);
         fs.readFile(filePath, 'utf8', (err, data) => {
             if (err) {
-                console.log("CSS Error:", err.message);  // ← ADD THIS
+
                 res.statusCode = 404;
                 res.end('File not found');
             } else {
-                console.log("CSS loaded successfully!");  // ← ADD THIS
+
                 res.setHeader('Content-Type', 'text/css');
+                res.end(data);
+            }
+        });
+    }
+
+    else if (pathname === '/signup.html') {
+        fs.readFile('./doc/signup.html', 'utf8', (err, data) => {
+            if (err) {
+                res.statusCode = 500
+                res.end('Server Error')
+            } else {
+                res.setHeader('Content-Type', 'text/html')
+                res.end(data)
+            }
+        })
+    }
+    
+    else {
+        fs.readFile('./doc/404.html', 'utf8', (err, data) => {
+            if (err) {
+                res.statusCode = 404;
+                res.end('<h1>404 - Page Not Found</h1>');
+            } else {
+                res.statusCode = 404;
+                res.setHeader('Content-Type', 'text/html');
                 res.end(data);
             }
         });
