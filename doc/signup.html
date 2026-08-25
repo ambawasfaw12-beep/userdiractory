@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/signup.css">
+</head>
+
+<body>
+    <nav>
+        <div class="flex-box">
+            <div class="logo">
+                <a href="/">
+                    <span>User Directory</span>
+                </a>
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/users">All Users</a></li>
+                <li><a href="/signup.html">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="container">
+            <h2>Create Account</h2>
+            <form action="/signup" method="POST">
+                <div class="input-box">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+
+                <div class="input-box">
+                    <label for="age">Age:</label>
+                    <input type="text" name="age" id="age" placeholder="Enter your age">
+                </div>
+
+                <div class="input-box">
+                    <label for="city">City:</label>
+                    <input type="text" name="city" id="city" placeholder="Enter your city">
+                </div>
+                <div>
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+            <div class="already-account">
+                Already have an account? <a href="/users">View all users</a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

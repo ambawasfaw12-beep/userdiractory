@@ -1,0 +1,32 @@
+main {
+    height: calc(60vh - 70px);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: inherit;
+    justify-content: center;
+    gap: 2rem;
+}
+
+p {
+    color: #b6b6b6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--buttons-color);
+}
+
+.signup-link {
+    background: var(--buttons-color);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    color: var(--text-color);
+}
+
+.signup-link:hover {
+    background: var(--buttons-hover);
+}

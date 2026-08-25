@@ -1,0 +1,91 @@
+main {
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+form {
+    background: white;
+    padding: 3rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.input-box {
+    margin-bottom: 1.5rem;
+}
+
+.input-box label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    background: transparent;
+}
+
+.input-box input:focus {
+    outline: none;
+    border-bottom-color: #3498db;
+}
+
+.input-box input::placeholder {
+    color: #aaa;
+    font-size: 0.95rem;
+}
+
+form button {
+    width: 100%;
+    background: #3498db;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 0.5rem;
+}
+
+form button:hover {
+    background: #2980b9;
+}
+
+.already-account {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #666;
+}
+
+.already-account a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.already-account a:hover {
+    text-decoration: underline;
+} 
